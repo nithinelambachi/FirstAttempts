@@ -1,35 +1,40 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import axios from "axios"
-import {useHistory} from "react-router-dom"
+import {useParams} from "react-router-dom"
 
 export const EditUser = () => {
 
 
-// let history = useHistory()
+
 const [user, setUser] = useState(
     {name:"",
 email:"",
 phone:""}
 );
-
+const {id} = useParams() //Received from the URL
+console.log(id);
 const {name, email, phone}=user;
 
 const onInputChange= e =>{
     setUser({...user,[e.target.name]: e.target.value});
     };
-
+useEffect(()=>{
+    loadUser();
+},[]);
 const onSubmit=async  e =>{
     e.preventDefault();
-await axios.post("http://localhost:3000/users",user)
-//history.push("/")
+await axios.put(`http://localhost:3000/users/${id}`, user)
+
 }
 
 const loadUser=async ()=>{
-    const result= await axios.get ("http://localhost:3000/users")
+    const result= await axios.get (`http://localhost:3000/users/${id}`);
+   setUser(result.data);
+   console.log(result.data);
 }
     return (
         <form onSubmit={e => onSubmit(e)}>
-        <h1>Sign up</h1>
+        <h1>Update User</h1>
         <input 
         type="text" 
         name="name" 
@@ -53,7 +58,7 @@ const loadUser=async ()=>{
         <button 
         type="submit" 
         value="Sign Up" 
-        onSubmit><span>Sign up</span></button>
+        onSubmit><span>Update</span></button>
       </form>
     )
 }

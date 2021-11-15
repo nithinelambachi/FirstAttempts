@@ -18,7 +18,10 @@ const loadUsers = async() => {
     const result = await axios.get('http://localhost:3000/users');
    setData(result.data.reverse());
 }
-
+const deleteUser = async id => {
+    await axios.delete(`http://localhost:3000/users/${id}`);
+    loadUsers();
+}
 
     return (
         <div className="py-4">
@@ -40,8 +43,9 @@ const loadUsers = async() => {
             <td>{user.email}</td>
             <td>{user.phone}</td>
             <td> 
-                <Link className="btn btn-outline-primary" to={`/edit/${user.id}`}>Edit</Link>
-                <Link className="btn btn-outline-danger" to={`/edit/${user.id}`}>Delete</Link>
+                <Link className="btn btn-outline-primary" to={`/user/edit/${user.id}`}>Edit</Link>
+                {/* <Link className="btn btn-outline-danger"  onClick={()=> deleteUser(user.id)}> Delete</Link> */}
+                <button className="btn btn-outline-danger"  onClick={()=> deleteUser(user.id)}> Delete</button>
         </td>
         </tr>
      ))}
