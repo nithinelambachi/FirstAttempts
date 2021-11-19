@@ -10,7 +10,6 @@ const Home = () => {
     
     useEffect(() => {
         loadUsers();
-    console.log('useEffect');
     }, []);
 
 
@@ -25,7 +24,7 @@ const deleteUser = async id => {
 
     return (
         <div className="py-4">
-           <table class="table table-striped table-dark">
+           <table className="table table-striped table-dark">
   <thead>
     <tr>
       <th scope="col">#</th>

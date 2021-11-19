@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
-import axios from "axios"
-import {useHistory} from "react-router-dom"
+import axios from "axios";
+// import { useHistory } from "react-router-dom";
 
 export const AddUser = () => {
 
-
-// let history = useHistory()
+// const history = useHistory()
 const [user, setUser] = useState(
     {name:"",
 email:"",
@@ -21,7 +20,8 @@ const onInputChange= e =>{
 const onSubmit=async  e =>{
     e.preventDefault();
 await axios.post("http://localhost:3000/users",user)
-//history.push("/")
+// history.push("/");
+
 }
     return (
         <form onSubmit={e => onSubmit(e)}>

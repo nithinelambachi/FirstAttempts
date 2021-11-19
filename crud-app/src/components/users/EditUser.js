@@ -21,6 +21,9 @@ const onInputChange= e =>{
 useEffect(()=>{
     loadUser();
 },[]);
+
+
+
 const onSubmit=async  e =>{
     e.preventDefault();
 await axios.put(`http://localhost:3000/users/${id}`, user)
