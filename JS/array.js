@@ -1,3 +1,13 @@
+//2 types of array declaration
+var a= Array(2,3,4,5,6)
+var a =[2,4,5,6]
+console.log(typeof(a));
+console.log(a);
+ 
+
+
+
+
 let input=[ ["name", "age", "salary", "email"], ["John", 22, 56000, "John@gmail.com"],
  ["David", 30, 46800, "david@yahoo.in"] ] ;
 // const header = input[0];
