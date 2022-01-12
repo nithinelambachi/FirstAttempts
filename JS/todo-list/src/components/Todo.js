@@ -11,13 +11,16 @@ const Todo = ({todo, index, markComplete, editTitle,updateTodo}) =>{
     return(
     
    <div className="todo">
-        <p style={{textDecoration : todo.isCompleted ? "line-through" : ""}}>
-            <input type={"checkbox"} onChange={() => markComplete(index)} name={"completed"} id={todo.id}/>{' '}
+        <p style={{textDecoration : todo.completed ? "line-through" : ""}}>
+            <input type={"checkbox"} 
+            checked={todo.completed} 
+            onChange={() => markComplete(index)} 
+            id={todo.id}/>
             {todo.title}  </p>
             
-         
+{/*          
              {button}
-            <input type={'button'} value={'Edit'} onClick={() => setVisible(!isEditVisible)}/>
+            <input type={'button'} value={'Edit'} onClick={() => setVisible(!isEditVisible)}/> */}
       
     </div>
 );}
