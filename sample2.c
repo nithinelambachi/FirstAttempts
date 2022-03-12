@@ -1,6 +1,7 @@
   #include<stdio.h>
     int main()
     {
+        
        int choice=1;
        switch (choice)
        {

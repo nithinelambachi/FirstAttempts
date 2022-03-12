@@ -1,0 +1,35 @@
+.voyage-stepper .round-outer {
+    top: -14px;
+    left: -4px;
+}
+
+.voyage-stepper .round-inner {
+    top: -10px;
+}
+
+.voyage-stepper .round-small {
+    top: -9px;
+}
+
+.voyage-stepper .left-arrow::before,
+.voyage-stepper .right-arrow::after{
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-style: solid;
+    border-color: #4A4A4A;
+    border-width: 0px 0px 3px 3px;
+}
+
+.voyage-stepper .left-arrow::before {
+    transform: rotate(45deg);
+}
+
+.voyage-stepper .right-arrow::after {
+    transform: rotate(-135deg);
+}
+
+.voyage-stepper .stops-text {
+    margin-top: -48px;
+}

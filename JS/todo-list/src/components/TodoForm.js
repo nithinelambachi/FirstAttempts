@@ -1,33 +1,36 @@
 import React, { useState } from "react";
-
+import '../output.css';
 const TodoForm = ({ addTodo }) => {
 	const [value, setvalue] = useState("");
 
 	const handleChange = (e) => {
-		//to handle change in form input (when user is typing)
-		setvalue(e.target.value); //e.target gives the value of current value the user is typing
+	
+		setvalue(e.target.value); 
 	};
 
 	const handleSubmit = (e) => {
-		e.preventDefault(); //to prevent DOM from reloading the page
+		e.preventDefault(); 
 		if (!value)
-			//if user submits empty form, do nothing
 			return;
 		addTodo(value);
-		setvalue(""); //set the value to be empty again to get ready for next input
+		setvalue(""); 
 	};
 
 	return (
-		<div className={"container"}>
-			<div className="app-title text-center">Todo List</div>
+		<div>
+			<div className="text-xl p-10 m-10">Todo List</div>
 			<form onSubmit={handleSubmit}>
+				<label htmlFor="todo-input" className="block">
+					Add Todo 
+				</label>
 				<input
-					type={"text"}
-					placeholder={"Add a ToDo"}
+				data-testid="todo-input"
+					type="text"
+					placeholder="Add a ToDo"
 					value={value}
 					onChange={handleChange}
 				/>
-				<input type={"submit"} value={"Add"} />
+				<input data-testid="button" className="button" placeholder="Add" type={"submit"} value={"Add"} />
 			</form>
 		</div>
 	);

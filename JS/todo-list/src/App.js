@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+// import "./output.css";
 import TodoForm from "./components/TodoForm";
 import Todos from "./components/Todos";
 
@@ -18,25 +19,25 @@ function App() {
 	useEffect(() => {
 		fetchTodos();
 	}, []);
-  
-//posting data to the server
-	// const createTodo = async (title) => {
-	// 	console.log("res");
-	// 	const response = await fetch(
-	// 		"https://jsonplaceholder.typicode.com/todos",
-	// 		{
-	// 			method: "POST",
-	// 			body: JSON.stringify({ title, completed: false }),
-	// 			headers: {
-	// 				"Content-type": "application/json; charset=UTF-8",
-	// 			},
-	// 		}
-	// 	);
-	// };
+
+// posting data to the server
+	const createTodo = async (title) => {
+		console.log("res");
+		const response = await fetch(
+			"https://jsonplaceholder.typicode.com/todos",
+			{
+				method: "POST",
+				body: JSON.stringify({ title, completed: false }),
+				headers: {
+					"Content-type": "application/json; charset=UTF-8",
+				},
+			}
+		);
+	};
 	const addTodo = (todo) => {
 		setTodos([...todos, { title: todo }]);
 
-		// createTodo(todos);
+		createTodo(todos);
 	};
 
 	const markComplete = (index) => {
@@ -59,10 +60,10 @@ function App() {
 	};
 
 	return (
-		<div className="parent-container">
-			<div className="container top-container">
-				<div className="app">
-					<div className="todoform">
+		<div className="p-10">
+			<div className="m-10">
+				<div >
+					<div>
 						<TodoForm addTodo={addTodo} />
 						<Todos
 							todos={todos}

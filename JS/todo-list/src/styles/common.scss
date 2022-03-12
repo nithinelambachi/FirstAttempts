@@ -1,0 +1,332 @@
+.textarea-scroll::-webkit-scrollbar {
+  display: none;
+}
+textarea {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: 1px solid #bebebe;
+}
+.accordian_main {
+  margin: 0px !important;
+}
+.layout_index {
+  z-index: -1;
+}
+.admin-header {
+  width: 95%;
+}
+
+.triangle430:after {
+  width: 0; 
+  height: 0; 
+  border-top: 200px solid transparent;
+  border-bottom: 200px solid transparent;
+  border-left: 180px solid #E5E5E5;
+  content:"";
+}
+.triangle650:after {
+  width: 0; 
+  height: 0; 
+  border-top: 300px solid transparent;
+  border-bottom: 300px solid transparent;
+  border-left: 180px solid #E5E5E5;
+  content:"";
+}
+.vertical-dash {
+  border-left: 3px dashed #21C979;
+  position: absolute;
+  height: 47px;
+  top: 32px;
+  left: 8px;
+}
+.mintank-height650 {
+  min-height: 629px;
+}
+.drop-wrap{
+  .css-1gtu0rj-indicatorContainer,
+  .css-tlfecz-indicatorContainer {
+    padding: 0.3125rem;
+    background-image: url(../images/icons/dropdown-icon.svg);
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: revert;
+    background-size: 100%;
+    position: relative;
+    color: transparent;
+    margin-top: 4px;
+    margin-right: 15px;
+  }
+}
+.disable-wrap {
+  .css-tlfecz-indicatorContainer {
+   opacity: 0;
+  }
+  .inner-wrap {
+    cursor: not-allowed;
+  }
+}
+.head-fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.footer-fix {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.SingleDatePicker {
+  width: 100%;
+}
+
+.SingleDatePickerInput__withBorder {
+  border-radius: 0.5rem;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  .DateInput {
+    flex-grow: 1;
+    border-radius: 0.5rem;
+  }
+  .DateInput_input {
+    border-width: 0px !important;
+    height: 3rem;
+    border-top-left-radius: 0.5rem !important;
+    border-bottom-left-radius: 0.5rem !important;
+  }
+  .SingleDatePickerInput_calendarIcon {
+    margin: auto 6px;
+  }
+}
+.fit-content {
+  height: fit-content;
+}
+.parcel-datepicker {
+  .SingleDatePickerInput__withBorder {
+    border-radius: 0.25rem;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    border-color:#BEBEBE  !important;;
+    .DateInput {
+      flex-grow: 1;
+      border-radius: 0.25rem;
+    }
+    .DateInput_input {
+      border-width: 0px !important;
+      height: 2.3rem;
+      border-top-left-radius: 0.25rem !important;
+      border-bottom-left-radius: 0.25rem !important;
+    }
+    .SingleDatePickerInput_calendarIcon {
+      margin: auto 6px;
+    }
+    .DayPicker_weekHeader{
+      top: 56px !important;
+    }
+  }
+}
+// .history-wrapper {
+//   height: 300px;
+//   overflow-y: auto;
+//   overflow-x: hidden;
+//   table {
+//     width: 100%;
+//     border-collapse: collapse;
+//   }
+
+//   th {
+//     text-align: left;
+//     background: #eee;
+//     position: sticky;
+//     top: 0px;
+//   }
+// }
+
+.react-select-container {
+  input {
+    box-shadow: none !important;
+  }
+}
+.accord-head {
+  background-color: #F8B113 !important;
+  color: #ffffff !important;
+}
+.accord-body {
+  background-color: #F9F2E2;
+  padding: 16px 0 !important;
+}
+.date-pick {
+  .SingleDatePickerInput__disabled, 
+  .DateInput_input__disabled_3 {
+    background-color: #d4d4d4;
+    color: #BEBEBE;
+    font-weight: 700;
+  }
+}
+
+.date_picker_anchor_right {
+  .DateInput_fang {
+      left: unset !important;
+      right: 0px !important;
+  }
+}
+
+.absolute_daypicker {
+  .SingleDatePicker_picker_1 {
+    top: 0 !important;
+  }
+  .DateInput_fang {
+    display: none;
+  }
+}
+.min-drop{
+  .css-yk16xz-control{
+    min-height: 48px !important;
+  }
+}
+.table-wrap {
+  width: calc(100vw -390px );
+  .css-yk16xz-control, .css-1fhf3k1-control {
+    min-height: 32px !important;
+    height: 33px;
+  }
+  .react-select-containers__control--is-disabled {
+    background-color: #D4D4D4;
+  }
+  table {
+  .head-wrap {
+    th {
+      border: 1px solid #D4D4D4;
+      padding: 4px 3px;
+    }
+  }
+}
+.body-wrap {
+  .Mui-disabled {
+    background-color: #D4D4D4;
+  }
+}
+}
+.seq-wrap{
+.input-wrap {
+input {
+  height: 38.5px;
+}
+}
+}
+.right-space {
+  input {
+    padding-right: 29px;
+  }
+}
+.cargo-drop{
+  .css-yk16xz-control {
+   border-color: #4a4a4a !important;
+  }
+}
+.vessel-card {
+  width: 47%;
+}
+.shorelist-wrap{
+  .react-select__control {
+    border-color: #4a4a4a !important;
+    padding: 5px 0px !important;
+  }
+}
+.country-list {
+  .css-yk16xz-control, .css-1fhf3k1-control, .css-1pahdxg-control {
+    min-height: 0px !important;
+    max-height: 32px !important;
+    border-color: #4a4a4a !important;
+    border-radius: 0px !important;
+  }
+  .react-select-container {
+    width: 176px !important;
+  }
+  .css-1uccc91-singleValue {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .react-select__control {
+    margin-bottom: 4px;
+  }
+}
+.alternate-row {
+  tr:nth-child(even) {
+    background-color: #E9EAF3;
+}
+}
+.cargotype-drop {
+  .react-select__menu {
+    font-size: 16px !important;
+  }
+}
+.word-wrap {
+  max-width: 180px;
+  word-break: break-all;
+}
+.adminwidth-val {
+  width: 95%;
+}
+.react-select__value-container--is-multi {
+  overflow-y: auto !important;
+  max-height: 150px;
+}
+.color-wrap {
+  input:focus {
+    background-color: #e5e6eb;
+  }
+  .react-select__control--is-focused {
+    background-color: #e5e6eb !important;
+  }
+}
+.cargo-dropstyle {
+  .css-yk16xz-control {
+    font-size: 16px !important;
+    font-weight: 700;
+  }
+  .react-select__control-menu-is-open {
+    font-size: 16px !important;
+    font-weight: 700;
+  }
+  .react-select-containers__menu {
+    font-size: 16px !important;
+  }
+  .react-select-containers__value-container {
+    font-size: 16px !important;
+    font-weight: 700;
+  }
+}
+.neg-position {
+  position: absolute;
+  top: -11.5px;
+  left: 2px;
+}
+.ship-card {
+ width: 460px;
+}
+.notify-wrap {
+  width: 1300px;
+}
+.ship-bg {
+  background-image: url('../images//icons//bg-ship.png');
+  background-repeat: no-repeat;
+  height: 710px;
+}
+.home-card {
+  width: 650px;
+}
+.home-cardsmall {
+  width: 338px;
+}
+.homecard-wrap {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 670px;
+}

@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Todo from "./Todo";
 const Todos = ({ todos, markComplete, editTitle }) => {
-	const updateTodo = (index, todo, newTitle) => {
-		console.log("title", newTitle);
-	};
+	// const updateTodo = (index, todo, newTitle) => {
+	// 	console.log("title", newTitle);
+	// };
 	return (
 		<div className={"todo-list"}>
 			{todos
@@ -14,7 +14,7 @@ const Todos = ({ todos, markComplete, editTitle }) => {
 						index={index}
 						markComplete={markComplete}
 						editTitle={editTitle}
-						updateTodo={updateTodo}
+						// updateTodo={updateTodo}
 					/>
 				))
 				.reverse()}
